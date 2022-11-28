@@ -58,7 +58,7 @@ function Find-InsightObject {
     
     end {
         try {
-            $response = Invoke-RestMethod -Uri $Request.Uri -Body $RequestBody -Headers $headers -Method POST
+            $response = Invoke-RestMethod -Uri $Request.Uri -Body $RequestBody -Headers $headers -Method POST -ContentType "application/json; charset=UTF-8"
         }
         catch {
             Write-Verbose "[$($MyInvocation.MyCommand.Name)] Failed"
